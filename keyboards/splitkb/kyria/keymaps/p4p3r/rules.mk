@@ -3,9 +3,9 @@ OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 ENCODER_ENABLE = no        # Enables the use of one or more encoders
 RGBLIGHT_ENABLE = yes      # Enable keyboard RGB underglow
-RGBLIGHT_ANIMATIONS = yes
+RGBLIGHT_ANIMATIONS = no
 WPM_ENABLE = yes
-MOUSEKEY_ENABLE = no
+MOUSEKEY_ENABLE = yes
 
 TAP_DANCE_ENABLE = no
 STENO_ENABLE = no
