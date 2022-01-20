@@ -36,6 +36,11 @@ enum layers {
 //     VIM_REDO,
 // };
 
+// Shortcuts that will be picked up by a tool like BetterTouchTool
+// to set Ploopy Nano Trackball leds and toggle scroll mode or reset
+#define PLP_SCR HYPR(KC_S) // Scroll
+#define PLP_RST HYPR(KC_R) // Reset
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /*
    * Base Layer: QWERTY
@@ -115,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, KC_1, 	  KC_2,    KC_3,    KC_4,    KC_5,                                        KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
       _______, _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU,                                     KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
       _______, _______, _______, _______, KC_MUTE, KC_VOLD, _______, _______, _______, _______, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______, _______,
-      KC_MS_BTN1, KC_MS_BTN2, _______, _______, _______, _______, _______, _______, KC_MS_BTN2, KC_MS_BTN1
+      KC_MS_BTN1, KC_MS_BTN2, PLP_SCR, _______, _______, _______, _______, _______, KC_MS_BTN2, KC_MS_BTN1
       ),
   /*
    * Adjust Layer: Function keys, RGB
@@ -134,7 +139,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ADJUST] = LAYOUT(
       _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                                       KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
       _______, RGB_TOG, RGB_SAI, RGB_HUI, RGB_VAI, RGB_MOD,                                     _______, _______, _______, KC_F11,  KC_F12,  _______,
-      _______, _______, RGB_SAD, RGB_HUD, RGB_VAD, RGB_RMOD,_______, _______, _______, _______, DF(_QWERTY), DF(_DVORAK), _______, _______, _______, _______,
+      _______, _______, RGB_SAD, RGB_HUD, RGB_VAD, RGB_RMOD,_______, _______, _______, _______, DF(_QWERTY), DF(_DVORAK), _______, _______, _______, PLP_RST,
       _______, _______, _______, _______, _______, _______, _______, TG(_QWERTY), TG(_DVORAK), _______
       ),
   // /*
